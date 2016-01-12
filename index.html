@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJs Demo</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/init.css" rel="stylesheet">
+</head>
+<body>
+<!--<div class="container">-->
+    <div class="navbar navbar-default" role="navigation" ng-controller="IndexController">
+        <div class="container">
+            <div class="navbar-header">
+                <a ui-sref="/" class="navbar-brand">AngularJs Demo</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li ng-class="{active:isActive(routeMap.index)}"><a ui-sref="/">首页</a> </li>
+                    <li ng-class="{active:isActive(routeMap.student)}"><a ui-sref="student">学员</a> </li>
+                    <li ng-class="{active:isActive(routeMap.course)}"><a ui-sref="course">课程</a> </li>
+                    <li ng-class="{active:isActive(routeMap.about)}"><a ui-sref="about">关于</a> </li>
+                    <li ng-class="{active:isActive(routeMap.message)}"><a ui-sref="message">留言</a> </li>
+                    <li ng-class="{active:isActive(routeMap.work)}"><a ui-sref="work">Work</a> </li>
+                    <li ng-class="{active:isActive(routeMap.team)}"><a ui-sref="team">Team</a> </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div ui-view class="row"></div>
+    </div>
+    <!--<div class="container-fluid row">-->
+        <!--<p class="text-center">footer</p>-->
+    <!--</div>-->
+    <footer class="footer text-center">
+        <div>
+            <a ui-sref="/" class="active">
+                <span>首页</span>
+                <span>首页</span>
+            </a>
+            <a ui-sref="/">
+                <span>在线留言</span>
+                <span>在线留言</span>
+            </a>
+            <a ui-sref="/">
+                <span>联系我们</span>
+                <span>联系我们</span>
+            </a>
+        </div>
+        <div>2</div>
+    </footer>
+<!--</div>-->
+<script src="./js/common/jquery-1.11.3.js"></script>
+<script src="./js/common/bootstrap.js"></script>
+<script src="./js/common/angular.js"></script>
+<script src="./js/common/angular-ui-router.js"></script>
+<script src="./js/common/angular-messages.js"></script>
+<script src="./js/common/angular-animate.js"></script>
+<script src="./js/config/app.js"></script>
+
+<!-- directive -->
+<script src="./js/directive/baseDirective.js"></script>
+<script src="./js/directive/myCollapseDirective.js"></script>
+<script src="./js/directive/myAccordionDirective.js"></script>
+<script src="./js/directive/myPaging.js"></script>
+<script src="./js/directive/myPaginationDirective.js"></script>
+
+<!-- controller -->
+<script src="./js/controller/mainController.js"></script>
+<script src="./js/controller/indexController.js"></script>
+<script src="./js/controller/courseController.js"></script>
+<script src="./js/controller/angularController.js"></script>
+<script src="./js/controller/animationController.js"></script>
+<script src="./js/controller/workController.js"></script>
+<script src="./js/controller/collapseController.js"></script>
+<script src="./js/controller/accordionController.js"></script>
+<script src="./js/controller/paginationController.js"></script>
+</body>
+</html>
